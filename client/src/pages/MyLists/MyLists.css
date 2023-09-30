@@ -1,0 +1,115 @@
+.movieLists{
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  width: 85%;
+  gap: 1.2rem;
+  margin: 1.5rem 0 0 0;
+  background-color: var(--bg-shade-light);
+  padding: 1rem;
+  border-radius: 15px;
+  
+  & .list_container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: .9rem;
+    border-bottom: 1px solid var(--text);
+    & .list_title{
+      padding-left: 1rem;
+    }
+    & .btn_svg {
+      width: 2rem;
+    }
+    & form{
+      padding-bottom: 5px;
+    }
+  }
+  & .list_container:first-child{
+    margin-top: 0;
+  }
+  & .nav-menu{
+    margin-right: 5rem;
+    margin-top: 6.3rem;
+  }
+}
+
+.movie_list_container{
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  gap: 1rem;
+  margin-left:1.52rem;
+  & .random_container{
+    display: flex;
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(35, 40, 48, 0.75);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    gap:2rem;
+    & .btn_svg{
+      display: flex;
+      align-self: center;
+      justify-content: center;
+      padding: .3rem 0 .3rem 0;
+      background-color: rgba(35, 40, 48, 0);
+      border-right: 1px solid rgba(255, 255, 255, 0.125);
+    }
+    & .btn_svg:hover{
+      transform: none;
+    }
+  }
+  & .list{
+    display: flex;
+    flex-direction: column-reverse;
+    margin-left: -1px;
+    gap: 1rem;
+    & li{
+      display: flex;
+      border: 1px solid rgba(255, 255, 255, 0);
+      & p{
+        padding-left: .5rem;
+      }
+      & .btn_container{
+        position: absolute;
+        right: 1rem;
+        display: flex;
+        align-self: center;
+        visibility: hidden;
+        & .btn_svg{
+          width: 2rem;
+          background-color: rgba(35, 40, 48, 0);
+        }
+      }
+    }
+    & li:hover{
+      backdrop-filter: blur(16px) saturate(180%);
+      -webkit-backdrop-filter: blur(16px) saturate(180%);
+      background-color: rgba(35, 40, 48, 0.75);
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.125);
+      border-top-left-radius:0;
+      border-bottom-left-radius: 0;
+      margin-left: 1px;
+      & .btn_container{
+        visibility: visible;
+      }
+    }
+  }
+}
+
+.buttons_container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.add_container{
+  display: flex;
+  align-self: flex-end;
+  width: 2rem;
+}

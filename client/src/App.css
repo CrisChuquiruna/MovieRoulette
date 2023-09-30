@@ -1,0 +1,141 @@
+@import url(./pages/form.css);
+
+#root{
+  min-width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+}
+
+.error{
+  color: var(--error);
+}
+
+.container{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+.container_flex{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  & .btn_svg{
+    width: 2rem;
+  }
+}
+
+.layer{
+  min-height: 100vh;
+}
+
+.btn{ 
+  color: var(--bg);
+  background-color: var(--primary);
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-family: 'Oxygen', sans-serif;
+}
+.btn:hover{
+  background-color: var(--primary-shade);
+}
+
+.btn_svg{
+  align-self: center;
+  background-color: #ffffff00;
+  color: var(--text);
+  width: 3.3rem;
+  cursor: pointer;
+  padding: 0;
+}
+.btn_svg:hover{
+  transform: scale(1.05);
+}
+
+.no_display{
+  display: none;
+}
+
+.pop-up{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  backdrop-filter: blur(10px);
+  & .btn_svg{
+    background-color: #17191e00;
+  }
+}
+
+.ocult{
+  display: none;
+}
+
+.nav-menu{
+  background-color: var(--bg);
+  position: absolute;
+  right: 3px;
+  border: 1px solid var(--text);
+  border-radius: 10px;
+  & ul{
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+  }
+  & li{
+    display: flex;
+    align-items: center;
+    padding-left: 0.5rem;
+    padding-top: 0.5rem;
+    cursor: pointer;
+  }
+  & li:first-child{    
+    cursor:default;
+  }
+  & li:first-child:hover{
+    background-color: var(--bg);
+  }
+  & li:hover{
+    background-color: var(--bg-shade);
+    & button{
+      background-color: var(--bg-shade);
+    }
+  }
+  & button{
+    color: var(--text);
+    background-color: var(--bg);
+    font-size: 1.1rem;
+    padding: 0;
+    cursor: pointer;
+  }
+}
+
+.edit_form{
+  display: flex;
+  gap: .2rem;
+  & input{
+    color: var(--text);
+    background-color: var(--secondary);
+    padding: 0.5rem 0 0.5rem 0.8rem;
+    border-radius: 4px;
+    border: none;
+  }
+  & input:focus-visible{
+    outline-offset: .1px;
+  }
+  & .btn_svg{
+    width: 1.5rem !important;
+  }
+}

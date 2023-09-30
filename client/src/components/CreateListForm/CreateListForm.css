@@ -1,0 +1,19 @@
+.createListForm_container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  & .btn_svg{
+    width: 2rem;
+    display: flex;
+    align-items: center;
+    & svg{
+      align-self: center;
+    }
+  }
+}
+
+.close{
+  position: absolute;
+  top: 2rem;
+  right: 5rem;
+}

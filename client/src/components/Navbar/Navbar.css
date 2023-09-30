@@ -1,0 +1,42 @@
+.nav-header{
+  top: 0;
+  width: 100%;
+}
+.nav{  
+  display: flex;
+  justify-content: flex-end;
+  width: 90%;
+  height: 8dvh;
+  top:0;
+
+  & ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    justify-content: end;
+
+    & li{
+      justify-content: center;
+      padding: 0 5px 0 5px;
+      border-radius: 5px;
+      & .icon-btn{
+        padding-top: 0.5rem;
+      }
+    }
+    & li:first-child{
+      position: absolute;
+      left: 5%;
+    }
+  }
+}
+
+.icon-btn{
+  background-color: var(--bg);
+  color: var(--text);
+  cursor: pointer;
+  & svg{
+    width: 2.5rem;
+  }
+}
+
