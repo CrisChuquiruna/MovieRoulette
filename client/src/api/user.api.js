@@ -4,10 +4,10 @@ axios.defaults.xsrfCookieName = 'csrftoken';
 axios.defaults.xsrfHeaderName = 'X-CSRFToken';
 axios.defaults.withCredentials = true;
 
-const PORT = 8000;
+// const PORT = 8000;
 
 export const client = axios.create({
-  baseURL: `http://127.0.0.1:${PORT}`
+  baseURL: 'https://movie-roulette.onrender.com'
 });
 
 export function getUser () {
