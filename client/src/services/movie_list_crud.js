@@ -17,7 +17,7 @@ export const updateList = async ({ list, newMovieList, newTitle, newIsPublic, ne
     title: newTitle ?? list.title,
     movies_list: newMovieList ?? list.moviesList,
     is_public: newIsPublic ?? list.is_public,
-    created_by: list.created_by,
+    created_by: list.created_by_id,
     shared_users: newSharedUsers ?? list.shared_users
   }).then(() => {
     reloader();

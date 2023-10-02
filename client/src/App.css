@@ -124,18 +124,23 @@
 
 .edit_form{
   display: flex;
-  gap: .2rem;
+  align-items: center;
+  gap: .2rem; 
+  width: 100%;
   & input{
     color: var(--text);
     background-color: var(--secondary);
-    padding: 0.5rem 0 0.5rem 0.8rem;
     border-radius: 4px;
-    border: none;
+    border: 0px solid;
+    width: 70%;
+    font-size: 1.15rem;    
   }
   & input:focus-visible{
-    outline-offset: .1px;
+    outline-offset: 0px;
+    border: none;
+    outline: 0;
   }
   & .btn_svg{
     width: 1.5rem !important;
-  }
+  }  
 }

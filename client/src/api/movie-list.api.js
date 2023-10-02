@@ -7,21 +7,21 @@ axios.defaults.withCredentials = true;
 const PORT = 8000;
 
 const movieListApi = axios.create({
-  baseURL: `http://127.0.0.1:${PORT}/movie_lists/movie_lists/`
+  baseURL: `http://127.0.0.1:${PORT}/movie_lists/`
 });
 
-export const getAllMovieLists = () => {
-  return movieListApi.get('/');
+export const getMovieList = (id) => {
+  return movieListApi.get(`/get_lists/${id}/`);
 };
 
 export const createMovieList = (movieList) => {
-  return movieListApi.post('/', movieList);
+  return movieListApi.post('movie_lists/', movieList);
 };
 
 export const deleteMovieList = (id) => {
-  return movieListApi.delete(`/${id}/`);
+  return movieListApi.delete(`movie_lists/${id}/`);
 };
 
 export const updateMovieList = (id, movieList) => {
-  return movieListApi.put(`/${id}/`, movieList);
+  return movieListApi.put(`movie_lists/${id}/`, movieList);
 };

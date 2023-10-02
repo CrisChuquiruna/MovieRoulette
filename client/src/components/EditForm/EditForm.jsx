@@ -3,7 +3,7 @@ import { useForm } from '../../hook/useForm';
 
 export function EditForm ({ setDisplay, display, handleClick, placeholder }) {
   const { title, onInputChange, onResetForm } = useForm({
-    title: placeholder
+    title: placeholder || ''
   });
 
   const onSubmit = (e) => {
@@ -17,7 +17,7 @@ export function EditForm ({ setDisplay, display, handleClick, placeholder }) {
   };
 
   return (
-    <form action="" onSubmit={onSubmit}>
+    <form action="" onSubmit={onSubmit} className="edit_form">
       <div className='edit_form container_flex '>
         <input
           type="text"
@@ -26,6 +26,7 @@ export function EditForm ({ setDisplay, display, handleClick, placeholder }) {
           onChange={onInputChange}
           autoComplete="off"
           value={title}
+          autoFocus
         />
         <button className="btn_svg" >{sendSVG}</button>
       </div>

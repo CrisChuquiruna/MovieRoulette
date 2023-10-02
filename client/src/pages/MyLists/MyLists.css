@@ -5,21 +5,20 @@
   flex-direction: column;
   width: 85%;
   gap: 1.2rem;
-  margin: 1.5rem 0 0 0;
+  margin: 1.5rem 0 3rem 0;
   background-color: var(--bg-shade-light);
   padding: 1rem;
   border-radius: 15px;
   
   & .list_container{
-    width: 100%;
+    width: 98%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-top: .9rem;
     border-bottom: 1px solid var(--text);
-    & .list_title{
-      padding-left: 1rem;
-    }
+    padding-left: 1rem;
+  
     & .btn_svg {
       width: 2rem;
     }
@@ -61,6 +60,13 @@
     & .btn_svg:hover{
       transform: none;
     }
+    & p {
+      padding: .1rem 0 0 0;
+      align-self: center;
+    }
+    & .text_small{
+      color: var(--text-shade);
+    }
   }
   & .list{
     display: flex;
@@ -70,8 +76,8 @@
     & li{
       display: flex;
       border: 1px solid rgba(255, 255, 255, 0);
-      & p{
-        padding-left: .5rem;
+      & span{
+        padding-right: .5rem;
       }
       & .btn_container{
         position: absolute;

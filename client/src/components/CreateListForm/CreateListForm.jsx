@@ -17,14 +17,15 @@ export default function CreateListForm ({ handleClick, reloader }) {
 
   const onSubmit = async (e) => {
     e.preventDefault();
-    createList({
+    const list = {
       title,
       movies_list,
       is_public,
       created_by,
-      shared_users,
-      reloader
-    });
+      shared_users
+    };
+
+    createList({ list, reloader });
     handleClick();
     onResetForm();
   };

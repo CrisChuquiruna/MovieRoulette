@@ -60,7 +60,10 @@ export function Navbar () {
     </header>
     <main className='container'>
       <DropdownMenu displayMenu={navMenu}>
-        <li><span>{user.username}</span></li>
+        <header>
+          <p>{user.username}</p>
+          <p className='text_small'>id:{user.user_id}</p>
+        </header>
         <li><button onClick={onLogout}>Logout</button></li>
       </DropdownMenu>
       <Outlet/>

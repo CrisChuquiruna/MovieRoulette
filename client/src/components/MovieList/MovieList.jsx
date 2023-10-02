@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { arrowSVG, deleteSVG, editSVG, getSVG } from '../../constants/icons';
+import { IconShare, arrowSVG, deleteSVG, editSVG, getSVG } from '../../constants/icons';
 import { Movie, AddMovieForm } from '../index';
 import { EditForm } from '../EditForm/EditForm';
 import { deleteList, updateList } from '../../services/movie_list_crud';
@@ -29,6 +29,10 @@ export function MovieList ({ list, reloader }) {
     updateList({ list, newTitle, reloader });
   };
 
+  const shareList = (newSharedUsers) => {
+    updateList({ list, newSharedUsers, reloader });
+  };
+
   const displayMenuClick = () => {
     setDisplayForm(!displayForm);
   };
@@ -54,6 +58,7 @@ export function MovieList ({ list, reloader }) {
 
       <div className='buttons_container'>
         <button className="btn_svg" onClick={deleteClick}>{deleteSVG}</button>
+        <button className="btn_svg" onClick={shareList}>{IconShare}</button>
         <button className='btn_svg' onClick={displayMenuClick}>{editSVG}</button>
         <button className="btn_svg" onClick={handleClick}>{arrowSVG}</button>
       </div>
@@ -63,7 +68,7 @@ export function MovieList ({ list, reloader }) {
       <section className='movie_list_container'>
         <div className='random_container'>
           <button className="btn_svg" onClick={getRandom}>{getSVG}</button>
-          <p>{randomMovie}</p>
+          {randomMovie ? <p>{randomMovie}</p> : <p className='text_small'>{'Get random movie'}</p>}
         </div>
         <div className='container_flex'>
           <AddMovieForm movies={movies} setMovies={setMovies} reloader={reloader} list={list} />
