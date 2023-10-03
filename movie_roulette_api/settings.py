@@ -105,6 +105,12 @@ WSGI_APPLICATION = 'movie_roulette_api.wsgi.application'
 
 # 'ENGINE': 'django.db.backends.sqlite3',
 # 'NAME': BASE_DIR / 'db.sqlite3',
+# DATABASES = {
+#     "default": {
+#         "ENGINE": 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
 DATABASES = {
     'default': dj_database_url.config(
         default='postgresql://postgres:postgres@localhost:5432/mysite',
@@ -120,7 +126,8 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.IsAuthenticated',
     ),
     'DEFAULT_AUTHENTICATION_CLASSES': (
-        'rest_framework.authentication.SessionAuthentication',
+        'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
+        # 'rest_framework.authentication.SessionAuthentication',
     ),
 }
 
@@ -181,3 +188,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 REST_FRAMEWORK = {
     'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema',
 }
+
