@@ -29,24 +29,27 @@ DEBUG = 'RENDER' not in os.environ
 
 ALLOWED_HOSTS = []
 
-RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
+# RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",
     "http://127.0.0.1:5173",
     "http://127.0.0.1",
+    'https://youmovieroulette.netlify.app'
 ]
 
 CSRF_TRUSTED_ORIGINS = [
     "http://localhost:5173",
     "http://127.0.0.1:5173",
     "http://127.0.0.1",
+    'https://youmovieroulette.netlify.app'
+
 ]
 
-if RENDER_EXTERNAL_HOSTNAME:    
-    ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
-    CORS_ALLOWED_ORIGINS.append(RENDER_EXTERNAL_HOSTNAME)
-    CSRF_TRUSTED_ORIGINS.append(RENDER_EXTERNAL_HOSTNAME)
+# if RENDER_EXTERNAL_HOSTNAME:    
+#     ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
+#     CORS_ALLOWED_ORIGINS.append(RENDER_EXTERNAL_HOSTNAME)
+#     CSRF_TRUSTED_ORIGINS.append(RENDER_EXTERNAL_HOSTNAME)
 
 CORS_ALLOW_CREDENTIALS = True
 
