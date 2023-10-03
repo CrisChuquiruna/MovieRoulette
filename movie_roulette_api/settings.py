@@ -27,7 +27,11 @@ SECRET_KEY = os.environ.get('SECRET_KEY', default='your secret key')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'RENDER' not in os.environ
 
+CSRF_COOKIE_SECURE = True
+
 SESSION_COOKIE_SECURE = True
+
+CSRF_COOKIE_SAMESITE = 'None'
 
 SESSION_COOKIE_SAMESITE = 'None'
 
@@ -45,7 +49,6 @@ CSRF_TRUSTED_ORIGINS = [
     "http://127.0.0.1:5173",
     "http://127.0.0.1",
     'https://youmovieroulette.netlify.app'
-
 ]
 
 CORS_ALLOW_CREDENTIALS = True
@@ -129,7 +132,9 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.IsAuthenticated',
     ),
     'DEFAULT_AUTHENTICATION_CLASSES': (
-         'rest_framework.authentication.TokenAuthentication',
+        #  'rest_framework.authentication.TokenAuthentication',
+         'rest_framework.authentication.SessionAuthentication',
+        #  'rest_framework.authentication.BasicAuthentication',
     ),
 }
 
