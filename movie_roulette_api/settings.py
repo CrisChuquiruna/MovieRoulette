@@ -37,14 +37,14 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",
     "http://127.0.0.1:5173",
     "http://127.0.0.1",
-    'https://youmovieroulette.netlify.app'
+    # 'https://youmovieroulette.netlify.app'
 ]
 
 CSRF_TRUSTED_ORIGINS = [
     "http://localhost:5173",
     "http://127.0.0.1:5173",
     "http://127.0.0.1",
-    'https://youmovieroulette.netlify.app'
+    # 'https://youmovieroulette.netlify.app'
 ]
 
 CORS_ALLOW_CREDENTIALS = True
@@ -105,20 +105,18 @@ WSGI_APPLICATION = 'movie_roulette_api.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-# 'ENGINE': 'django.db.backends.sqlite3',
-# 'NAME': BASE_DIR / 'db.sqlite3',
-# DATABASES = {
-#     "default": {
-#         "ENGINE": 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
 DATABASES = {
-    'default': dj_database_url.config(
-        default='postgresql://postgres:postgres@localhost:5432/mysite',
-        conn_max_age=600
-    )
+    "default": {
+        "ENGINE": 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
 }
+# DATABASES = {
+#     'default': dj_database_url.config(
+#         default='postgresql://postgres:postgres@localhost:5432/mysite',
+#         conn_max_age=600
+#     )
+# }
 
 ## User model
 AUTH_USER_MODEL = 'user_api.AppUser'
