@@ -7,6 +7,8 @@ from rest_framework.authentication import SessionAuthentication
 
 # Create your views here.
 class MovieListView(viewsets.ModelViewSet):
+    authentication_classes = (SessionAuthentication,)
+    permission_classes = (permissions.AllowAny,)
     serializer_class = MovieListsSerializer
     queryset = MovieLists.objects.all()
 

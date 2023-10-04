@@ -29,7 +29,7 @@ DEBUG = 'RENDER' not in os.environ
 
 SESSION_COOKIE_SECURE = True
 
-SESSION_COOKIE_SAMESITE = 'None'
+# SESSION_COOKIE_SAMESITE = 'None'
 
 ALLOWED_HOSTS = []
 
@@ -37,14 +37,14 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",
     "http://127.0.0.1:5173",
     "http://127.0.0.1",
-    # 'https://youmovieroulette.netlify.app'
+    'https://youmovieroulette.netlify.app'
 ]
 
 CSRF_TRUSTED_ORIGINS = [
     "http://localhost:5173",
     "http://127.0.0.1:5173",
     "http://127.0.0.1",
-    # 'https://youmovieroulette.netlify.app'
+    'https://youmovieroulette.netlify.app'
 ]
 
 CORS_ALLOW_CREDENTIALS = True
