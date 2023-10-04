@@ -7,7 +7,7 @@ axios.defaults.withCredentials = true;
 // const PORT = 8000;
 
 const movieListApi = axios.create({
-  baseURL: 'http://127.0.0.1:8000/movie_lists/'
+  baseURL: 'https://movie-roulette.onrender.com/movie_lists/'
 });
 
 export const getMovieList = (id) => {
