@@ -33,17 +33,20 @@ SESSION_COOKIE_SAMESITE = 'None'
 CSRF_COOKIE_SECURE = True
 SESSION_COOKIE_SECURE = True
 ACCESS_CONTROL_ALLOW_ORIGIN = [
-    'https://youmovieroulette.netlify.app'
+    'https://youmovieroulette.netlify.app',
+    'http://127.0.0.1:5173'
 ]
 
 ALLOWED_HOSTS = []
 
 CORS_ALLOWED_ORIGINS = [
-    'https://youmovieroulette.netlify.app'
+    'https://youmovieroulette.netlify.app',
+    'http://127.0.0.1:5173'
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://youmovieroulette.netlify.app'
+    'https://youmovieroulette.netlify.app',
+    'http://127.0.0.1:5173'
 ]
 
 CORS_EXPOSE_HEADERS = ['Content-Type', 'X-CSRFToken']
