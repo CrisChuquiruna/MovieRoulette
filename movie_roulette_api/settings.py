@@ -30,6 +30,8 @@ DEBUG = 'RENDER' not in os.environ
  # PROD ONLY
 SESSION_COOKIE_SAMESITE = 'None'
 SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE= True
+CSRF_COOKIE_SAMESITE = 'None'
 
 ACCESS_CONTROL_ALLOW_ORIGIN = [
     'https://youmovieroulette.netlify.app',
@@ -129,7 +131,7 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.IsAuthenticated',
     ),
     'DEFAULT_AUTHENTICATION_CLASSES': (
-        #  'rest_framework.authentication.TokenAuthentication',
+         'rest_framework.authentication.TokenAuthentication',
          'rest_framework.authentication.SessionAuthentication',
         #  'rest_framework.authentication.BasicAuthentication',
     ),
