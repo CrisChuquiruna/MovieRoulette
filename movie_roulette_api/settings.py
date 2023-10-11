@@ -38,16 +38,10 @@ SESSION_COOKIE_SAMESITE = 'None'
 ALLOWED_HOSTS = []
 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:5173",
-    "http://127.0.0.1:5173",
-    "http://127.0.0.1",
     'https://youmovieroulette.netlify.app'
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-    "http://localhost:5173",
-    "http://127.0.0.1:5173",
-    "http://127.0.0.1",
     'https://youmovieroulette.netlify.app'
 ]
 
@@ -131,7 +125,7 @@ REST_FRAMEWORK = {
     ),
     'DEFAULT_AUTHENTICATION_CLASSES': (
          'rest_framework.authentication.TokenAuthentication',
-        #  'rest_framework.authentication.SessionAuthentication',
+         'rest_framework.authentication.SessionAuthentication',
         #  'rest_framework.authentication.BasicAuthentication',
     ),
 }

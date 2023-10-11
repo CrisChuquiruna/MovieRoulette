@@ -1,0 +1,4 @@
+.main-title{
+  text-shadow: 0 0 40px var(--primary), 0 0 5px var(--primary), 0 0 15px var(--primary);
+  margin-top: 5rem;
+}
